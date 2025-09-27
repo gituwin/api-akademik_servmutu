@@ -1,0 +1,178 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+// require APPPATH . '/libraries/REST_Controller.php';
+
+
+class Sinkron extends CI_Controller {
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('m_akreditasi/m_sinkron', 'akrd');
+			$this->mutu = $this->load->database('mutu');
+
+	}
+	function index()
+	{
+		
+		// $data[]=array('nama_prodi' => 'My title',
+  //       'jenjang' => 'My Name',
+  //       'jenis' => 'My date');
+  //       $this->sia_api_lib_format->output($data['0'], $format);
+		echo "string";
+	}
+	function coba($format='json')
+	{
+		$kode = (int)preg_replace("/[^0-9]/", "", $_POST['api_kode']);
+		$subkode = (int)preg_replace("/[^0-9]/", "", $_POST['api_subkode']);
+		$api_search = $this->input->post('api_search');
+		$data[]=array('nama_prodi' => 'My title',
+        'jenjang' => 'My Name',
+        'jenis' => 'My date');
+		switch ($kode) {
+			case 1111:
+				switch ($subkode) {
+					case 99:
+						// $query = $this->akrd->abraham($api_search[0]);
+					$this->sia_api_lib_format->output($data['0'], $format);
+
+						break;
+				}
+				break;
+		}
+		
+		# code...
+	}
+	// function coba_fauzi($format = 'json'){
+	// 	$kode = (int)preg_replace("/[^0-9]/", "", $_POST['api_kode']);
+	// 	$subkode = (int)preg_replace("/[^0-9]/", "", $_POST['api_subkode']);
+	// 	$api_search = $this->input->post('api_search');
+	// 	switch ($kode) {
+	// 		case 1111:
+	// 			switch ($subkode) {
+	// 				case 99:
+	// 					$query = $this->akrd->create_coba_fauzi($api_search[0]);
+	// 					break;
+	// 			}
+	// 			break;
+	// 	}
+	// 	$this->sia_api_lib_format->output($query, $format);
+	// }
+
+	public function index_get($format = 'json')
+	{
+		 // echo "
+
+   //          <center>Hayo lo :)</center>
+$kode =  $this->input->post('api_kode');
+		$subkode = $this->input->post('api_subkode');
+		$coba = $this->input->post('api_search');
+switch ($kode) {
+	case 2323:
+		
+	switch ($subkode) {
+		case 3:
+			# code...
+			
+		$alfa=$this->akrd->sinkron();
+               // $this->response($alfa, 200);
+               $this->sia_api_lib_format->output($alfa, $format);
+		
+			# code...
+			break;
+	}
+		break;
+
+}
+
+   //    ";
+		
+	}
+
+
+	function index_post($format = 'json')
+	{
+		$kode =  $this->input->post('api_kode');
+		$subkode = $this->input->post('api_subkode');
+		$coba = $this->input->post('api_search');
+		$alfa=$this->akrd->sinkron();
+		$data= array(
+        'nama_prodi' => 'My title',
+        'jenjang' => 'My Name',
+        'jenis' => 'My date'
+);
+
+		switch ($kode) {
+
+			case 2322:
+				switch ($subkode) {
+					case 3:
+
+               // $this->sia_api_lib_format->output($data, $format);
+		$this->mutu->insert('mutu_master_prodi', $data);
+
+						// $alfa=$this->akrd->sinkron();
+					// $arr=array();
+					// $arr[]=$coba;
+				
+// 					// $datanya=array();
+	// 				foreach ($coba as $key ) {
+	// 					foreach ($key as $keys) {
+	// 							$kd_prodi=$keys['kd_prodi'];
+	// $nama_prodi=$keys['nama_prodi'];
+	// $jenjang=$keys['jenjang'];
+	// // $jenis=$key[''];
+	// $kd_pddikti=$keys['kd_pddikti'];
+	// $tgl_izin_prodi=$keys['tgl_izin_prodi'];
+	// $kd_jurusan=$keys['kd_jurusan'];
+	// $kd_fakultas=$keys['kd_fakultas'];
+	// $nama_fakultas=$keys['nama_fakultas'];
+	// $test=1221;
+	// $testa="sfdf";
+	// $datanya[]=array('kd_prodi'=>'$test',
+	// 				'nama_prodi'=>'$testa'
+					// );
+					// 		# code...
+					// // $this->db->insert('mutu_master_prodi', $datanya);
+
+					// 	}
+						
+
+					// $this->mutu->insert('mutu_master_prodi', $datanya);
+// $query = "INSERT INTO mutu_master_prodi (kd_prodi) VALUES ('$kd_prodi','nama_prodi')";
+//  $this->mutu->query($query);
+					}
+				// 		$title="hghfgdg";
+				// 	$name=$coba"jjkfhkdg";
+				// 	// $date=$coba"sdfkdhfgkd";
+				// 	$darr=array('nama_prodi' => $title,
+    //     'jenjang' => $name
+				// );
+					// $this->mutu->insert('mutu_master_prodi', $datanya);
+
+	// 				$query = "INSERT INTO public.mutu_master_prodi(
+	// nama_prodi, jenjang, kd_pddikti, tgl_izin_prodi, kd_jurusan, kd_fakultas, nama_fakultas, kd_prodi)
+	// VALUES (' al-Dirasat al-Islamiyya wa al-Arabiyya','S3', 76003, '21-AUG-15', 14001,08, 'Fakultas Ekonomi dan Bisnis Islam', '1');";
+			// 		$query="INSERT INTO mutu_master_prodi(nama_prodi,jenjang)VALUES ('al-Dirasat','kd_prodi')";
+		 // $this->mutu->query($query);
+		
+               // $this->sia_api_lib_format->output($datanya, $format);
+               // print_r('expression');
+// echo "string";
+						break;
+
+					
+				}
+				break;
+
+		}
+		# code...
+						// $this->sia_api_lib_format->output($alfa, $format);
+						// $alfa=$this->akrd->akreditasi();
+						// print_r($alfa);
+	
+	
+
+}
+
+/* End of file mutu_akreditasi.php */
+/* Location: ./application/controllers/mutu_akreditasi.php */

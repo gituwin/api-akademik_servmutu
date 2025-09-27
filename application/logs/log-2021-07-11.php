@@ -1,0 +1,39 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2021-07-11 08:12:39 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  column reference &quot;kd_prodi&quot; is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre_edit/postgre_edit_driver.php 176
+ERROR - 2021-07-11 08:12:39 --> Query error: ERROR:  column reference "kd_prodi" is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^
+ERROR - 2021-07-11 08:14:42 --> Severity: Notice  --> Undefined index: jenis /home/service/servmutu/application/modules/mutu/m_akreditasi/models/m_sinkron.php 1083
+ERROR - 2021-07-11 09:47:21 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  column reference &quot;kd_prodi&quot; is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre_edit/postgre_edit_driver.php 176
+ERROR - 2021-07-11 09:47:21 --> Query error: ERROR:  column reference "kd_prodi" is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^
+ERROR - 2021-07-11 09:51:20 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  column reference &quot;kd_prodi&quot; is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre_edit/postgre_edit_driver.php 176
+ERROR - 2021-07-11 09:51:20 --> Query error: ERROR:  column reference "kd_prodi" is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^
+ERROR - 2021-07-11 09:51:34 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  column reference &quot;kd_prodi&quot; is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre_edit/postgre_edit_driver.php 176
+ERROR - 2021-07-11 09:51:34 --> Query error: ERROR:  column reference "kd_prodi" is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^
+ERROR - 2021-07-11 11:12:24 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  column reference &quot;kd_prodi&quot; is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre_edit/postgre_edit_driver.php 176
+ERROR - 2021-07-11 11:12:24 --> Query error: ERROR:  column reference "kd_prodi" is ambiguous
+LINE 1: ...si_master_data.kd_unit, tmp_akd_master_fak.kd_fak,kd_prodi,n...
+                                                             ^
+ERROR - 2021-07-11 15:12:20 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;&quot;
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre/postgre_driver.php 180
+ERROR - 2021-07-11 15:12:20 --> Query error: ERROR:  invalid input syntax for type integer: ""
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^

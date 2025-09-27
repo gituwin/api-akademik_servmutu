@@ -1,0 +1,26 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2020-12-25 08:11:44 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;&quot;
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre/postgre_driver.php 180
+ERROR - 2020-12-25 08:11:44 --> Query error: ERROR:  invalid input syntax for type integer: ""
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^
+ERROR - 2020-12-25 10:15:01 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;&quot;
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre/postgre_driver.php 180
+ERROR - 2020-12-25 10:15:01 --> Query error: ERROR:  invalid input syntax for type integer: ""
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^
+ERROR - 2020-12-25 11:40:03 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;&quot;
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre/postgre_driver.php 180
+ERROR - 2020-12-25 11:40:03 --> Query error: ERROR:  invalid input syntax for type integer: ""
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^
+ERROR - 2020-12-25 13:44:18 --> Severity: Warning  --> pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;&quot;
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^ /home/service/servmutu/system/database/drivers/postgre/postgre_driver.php 180
+ERROR - 2020-12-25 13:44:18 --> Query error: ERROR:  invalid input syntax for type integer: ""
+LINE 1: ...(a.status_penawaran =1 and c.id_jenis_responden = '') and (a...
+                                                             ^

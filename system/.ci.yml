@@ -1,0 +1,28 @@
+stages:
+  - deploy
+
+Deploy: 
+  stage: deploy
+  variables:
+    DIREKTORI: "/home/service/api-akademik/app/servmutu"
+    GIT_URL_TANPA_HTTP: "git.uin-suka.ac.id/api-akademik/servmutu.git"
+    GIT_PORT: "https"
+  before_script:
+  - 'which ssh-agent || ( apt-get install openssh-client )'
+  - eval $(ssh-agent -s)
+  - echo "$DEPLOY_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - ssh-keyscan $SERVER_TARGET >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+  script:
+  - ssh $SSH_USER@$SERVER_TARGET "apt-get install git -y"
+  - ssh $SSH_USER@$SERVER_TARGET "mkdir -p $DIREKTORI && cd $DIREKTORI"
+  # gitlab+deploy-token-1:$CLONE_KEY : didapat dari project->settings->Repository
+  - ssh $SSH_USER@$SERVER_TARGET "if [ ! -d $DIREKTORI/application ]; then echo 'Project belum ditemukan di direktori $DIREKTORI' && cd $DIREKTORI && git clone $GIT_PORT://gitlab+deploy-token-24:$CLONE_KEY@$GIT_URL_TANPA_HTTP .; fi"
+  - ssh $SSH_USER@$SERVER_TARGET "cd $DIREKTORI && git pull origin main && exit"
+  - echo "misi selesai!!"
+
+

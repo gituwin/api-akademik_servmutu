@@ -1,0 +1,31 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Akreditasi extends CI_Model {
+
+	public $variable;
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->library('s00_lib_api');
+
+		
+	}
+	function akreditasi()
+	{
+			$url = "http://service.uin-suka.ac.id/servsiasuper/index.php/sia_public/sia_master/data_view";
+$tets = $this->s00_lib_api->get_api_json($url,'POST',array('api_kode'=>19000,'api_subkode'=>3, 'api_search' => array()));
+
+	foreach ($tets as $key ) {
+	
+	$fakultas=$key['NM_FAK_J'];
+	$fakultase[]=array(
+'nama_fakultanya'=>"$fakultas"	);
+}
+return $fakultase;
+	}
+
+}
+
+/* End of file akreditasi */
+/* Location: ./application/models/akreditasi */
